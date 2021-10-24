@@ -167,9 +167,20 @@ class CodesViewController: UIViewController {
         
         let defaults = UserDefaults.standard
         defaults.set(publicKeys, forKey: "publicKeys")
-        defaults.set(privateKeys[0], forKey: "currPrivateKey")
-    }
+        defaults.set(publicKeys[0], forKey: "publicKey")
+        
+        let currPrivateKey = privateKeys[0]
+        
+        let account = UIDevice.current.identifierForVendor!.uuidString
+        
+        let query: [String: Any] = [kSecClass as String: kSecClassKey,
+                                    kSecAttrAccount as String: account,
+                                    kSecValueData as String: currPrivateKey]
+        
     
+        let status = SecItemAdd(query as CFDictionary, nil)
+        print(status)
+    }
 
     /*
     // MARK: - Navigation
@@ -181,4 +192,13 @@ class CodesViewController: UIViewController {
     }
     */
 
+}
+
+
+
+
+enum KeychainError: Error {
+    case noKey
+    case unexpectedKey
+    case unhandledError(status: OSStatus)
 }
