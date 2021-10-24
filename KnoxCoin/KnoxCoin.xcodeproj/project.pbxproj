@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3625368127249A66007B2F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625368027249A66007B2F9A /* AppDelegate.swift */; };
+		3625368327249A66007B2F9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625368227249A66007B2F9A /* SceneDelegate.swift */; };
+		3625368527249A66007B2F9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625368427249A66007B2F9A /* ViewController.swift */; };
+		3625368827249A66007B2F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3625368627249A66007B2F9A /* Main.storyboard */; };
+		3625368B27249A66007B2F9A /* KnoxCoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3625368927249A66007B2F9A /* KnoxCoin.xcdatamodeld */; };
+		3625368D27249A6A007B2F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3625368C27249A6A007B2F9A /* Assets.xcassets */; };
+		3625369027249A6A007B2F9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3625368E27249A6A007B2F9A /* LaunchScreen.storyboard */; };
+		3625369B27249A6A007B2F9A /* KnoxCoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3625369A27249A6A007B2F9A /* KnoxCoinTests.swift */; };
+		362536A527249A6B007B2F9A /* KnoxCoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362536A427249A6B007B2F9A /* KnoxCoinUITests.swift */; };
+		362536A727249A6B007B2F9A /* KnoxCoinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362536A627249A6B007B2F9A /* KnoxCoinUITestsLaunchTests.swift */; };
+		362536B42724F17D007B2F9A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362536B32724F17D007B2F9A /* WelcomeViewController.swift */; };
+		362536B62724F2B7007B2F9A /* CodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362536B52724F2B7007B2F9A /* CodesViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3625369727249A6A007B2F9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3625367527249A66007B2F9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3625367C27249A66007B2F9A;
+			remoteInfo = KnoxCoin;
+		};
+		362536A127249A6B007B2F9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3625367527249A66007B2F9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3625367C27249A66007B2F9A;
+			remoteInfo = KnoxCoin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3625367D27249A66007B2F9A /* KnoxCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnoxCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3625368027249A66007B2F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3625368227249A66007B2F9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3625368427249A66007B2F9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3625368727249A66007B2F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3625368A27249A66007B2F9A /* KnoxCoin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KnoxCoin.xcdatamodel; sourceTree = "<group>"; };
+		3625368C27249A6A007B2F9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3625368F27249A6A007B2F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3625369127249A6A007B2F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3625369627249A6A007B2F9A /* KnoxCoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnoxCoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3625369A27249A6A007B2F9A /* KnoxCoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnoxCoinTests.swift; sourceTree = "<group>"; };
+		362536A027249A6B007B2F9A /* KnoxCoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnoxCoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		362536A427249A6B007B2F9A /* KnoxCoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnoxCoinUITests.swift; sourceTree = "<group>"; };
+		362536A627249A6B007B2F9A /* KnoxCoinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnoxCoinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		362536B32724F17D007B2F9A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = KnoxCoin/WelcomeViewController.swift; sourceTree = "<group>"; };
+		362536B52724F2B7007B2F9A /* CodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodesViewController.swift; path = KnoxCoin/CodesViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3625367A27249A66007B2F9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3625369327249A6A007B2F9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3625369D27249A6B007B2F9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3625367427249A66007B2F9A = {
+			isa = PBXGroup;
+			children = (
+				362536B32724F17D007B2F9A /* WelcomeViewController.swift */,
+				362536B52724F2B7007B2F9A /* CodesViewController.swift */,
+				3625367F27249A66007B2F9A /* KnoxCoin */,
+				3625369927249A6A007B2F9A /* KnoxCoinTests */,
+				362536A327249A6B007B2F9A /* KnoxCoinUITests */,
+				3625367E27249A66007B2F9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3625367E27249A66007B2F9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3625367D27249A66007B2F9A /* KnoxCoin.app */,
+				3625369627249A6A007B2F9A /* KnoxCoinTests.xctest */,
+				362536A027249A6B007B2F9A /* KnoxCoinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3625367F27249A66007B2F9A /* KnoxCoin */ = {
+			isa = PBXGroup;
+			children = (
+				3625368027249A66007B2F9A /* AppDelegate.swift */,
+				3625368227249A66007B2F9A /* SceneDelegate.swift */,
+				3625368427249A66007B2F9A /* ViewController.swift */,
+				3625368627249A66007B2F9A /* Main.storyboard */,
+				3625368C27249A6A007B2F9A /* Assets.xcassets */,
+				3625368E27249A6A007B2F9A /* LaunchScreen.storyboard */,
+				3625369127249A6A007B2F9A /* Info.plist */,
+				3625368927249A66007B2F9A /* KnoxCoin.xcdatamodeld */,
+			);
+			path = KnoxCoin;
+			sourceTree = "<group>";
+		};
+		3625369927249A6A007B2F9A /* KnoxCoinTests */ = {
+			isa = PBXGroup;
+			children = (
+				3625369A27249A6A007B2F9A /* KnoxCoinTests.swift */,
+			);
+			path = KnoxCoinTests;
+			sourceTree = "<group>";
+		};
+		362536A327249A6B007B2F9A /* KnoxCoinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				362536A427249A6B007B2F9A /* KnoxCoinUITests.swift */,
+				362536A627249A6B007B2F9A /* KnoxCoinUITestsLaunchTests.swift */,
+			);
+			path = KnoxCoinUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3625367C27249A66007B2F9A /* KnoxCoin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362536AA27249A6B007B2F9A /* Build configuration list for PBXNativeTarget "KnoxCoin" */;
+			buildPhases = (
+				3625367927249A66007B2F9A /* Sources */,
+				3625367A27249A66007B2F9A /* Frameworks */,
+				3625367B27249A66007B2F9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KnoxCoin;
+			productName = KnoxCoin;
+			productReference = 3625367D27249A66007B2F9A /* KnoxCoin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3625369527249A6A007B2F9A /* KnoxCoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362536AD27249A6B007B2F9A /* Build configuration list for PBXNativeTarget "KnoxCoinTests" */;
+			buildPhases = (
+				3625369227249A6A007B2F9A /* Sources */,
+				3625369327249A6A007B2F9A /* Frameworks */,
+				3625369427249A6A007B2F9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3625369827249A6A007B2F9A /* PBXTargetDependency */,
+			);
+			name = KnoxCoinTests;
+			productName = KnoxCoinTests;
+			productReference = 3625369627249A6A007B2F9A /* KnoxCoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3625369F27249A6B007B2F9A /* KnoxCoinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362536B027249A6B007B2F9A /* Build configuration list for PBXNativeTarget "KnoxCoinUITests" */;
+			buildPhases = (
+				3625369C27249A6B007B2F9A /* Sources */,
+				3625369D27249A6B007B2F9A /* Frameworks */,
+				3625369E27249A6B007B2F9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				362536A227249A6B007B2F9A /* PBXTargetDependency */,
+			);
+			name = KnoxCoinUITests;
+			productName = KnoxCoinUITests;
+			productReference = 362536A027249A6B007B2F9A /* KnoxCoinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3625367527249A66007B2F9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					3625367C27249A66007B2F9A = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					3625369527249A6A007B2F9A = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 3625367C27249A66007B2F9A;
+					};
+					3625369F27249A6B007B2F9A = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 3625367C27249A66007B2F9A;
+					};
+				};
+			};
+			buildConfigurationList = 3625367827249A66007B2F9A /* Build configuration list for PBXProject "KnoxCoin" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3625367427249A66007B2F9A;
+			productRefGroup = 3625367E27249A66007B2F9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3625367C27249A66007B2F9A /* KnoxCoin */,
+				3625369527249A6A007B2F9A /* KnoxCoinTests */,
+				3625369F27249A6B007B2F9A /* KnoxCoinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3625367B27249A66007B2F9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3625369027249A6A007B2F9A /* LaunchScreen.storyboard in Resources */,
+				3625368D27249A6A007B2F9A /* Assets.xcassets in Resources */,
+				3625368827249A66007B2F9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3625369427249A6A007B2F9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3625369E27249A6B007B2F9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3625367927249A66007B2F9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3625368527249A66007B2F9A /* ViewController.swift in Sources */,
+				362536B42724F17D007B2F9A /* WelcomeViewController.swift in Sources */,
+				3625368127249A66007B2F9A /* AppDelegate.swift in Sources */,
+				3625368B27249A66007B2F9A /* KnoxCoin.xcdatamodeld in Sources */,
+				3625368327249A66007B2F9A /* SceneDelegate.swift in Sources */,
+				362536B62724F2B7007B2F9A /* CodesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3625369227249A6A007B2F9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3625369B27249A6A007B2F9A /* KnoxCoinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3625369C27249A6B007B2F9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362536A727249A6B007B2F9A /* KnoxCoinUITestsLaunchTests.swift in Sources */,
+				362536A527249A6B007B2F9A /* KnoxCoinUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3625369827249A6A007B2F9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3625367C27249A66007B2F9A /* KnoxCoin */;
+			targetProxy = 3625369727249A6A007B2F9A /* PBXContainerItemProxy */;
+		};
+		362536A227249A6B007B2F9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3625367C27249A66007B2F9A /* KnoxCoin */;
+			targetProxy = 362536A127249A6B007B2F9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3625368627249A66007B2F9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3625368727249A66007B2F9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3625368E27249A6A007B2F9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3625368F27249A6A007B2F9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		362536A827249A6B007B2F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		362536A927249A6B007B2F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		362536AB27249A6B007B2F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JJ3T82U92L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KnoxCoin/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramisbahi.KnoxCoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		362536AC27249A6B007B2F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JJ3T82U92L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KnoxCoin/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramisbahi.KnoxCoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		362536AE27249A6B007B2F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JJ3T82U92L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramisbahi.KnoxCoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnoxCoin.app/KnoxCoin";
+			};
+			name = Debug;
+		};
+		362536AF27249A6B007B2F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JJ3T82U92L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramisbahi.KnoxCoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnoxCoin.app/KnoxCoin";
+			};
+			name = Release;
+		};
+		362536B127249A6B007B2F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JJ3T82U92L;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramisbahi.KnoxCoinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KnoxCoin;
+			};
+			name = Debug;
+		};
+		362536B227249A6B007B2F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JJ3T82U92L;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramisbahi.KnoxCoinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KnoxCoin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3625367827249A66007B2F9A /* Build configuration list for PBXProject "KnoxCoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362536A827249A6B007B2F9A /* Debug */,
+				362536A927249A6B007B2F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362536AA27249A6B007B2F9A /* Build configuration list for PBXNativeTarget "KnoxCoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362536AB27249A6B007B2F9A /* Debug */,
+				362536AC27249A6B007B2F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362536AD27249A6B007B2F9A /* Build configuration list for PBXNativeTarget "KnoxCoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362536AE27249A6B007B2F9A /* Debug */,
+				362536AF27249A6B007B2F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362536B027249A6B007B2F9A /* Build configuration list for PBXNativeTarget "KnoxCoinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362536B127249A6B007B2F9A /* Debug */,
+				362536B227249A6B007B2F9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3625368927249A66007B2F9A /* KnoxCoin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3625368A27249A66007B2F9A /* KnoxCoin.xcdatamodel */,
+			);
+			currentVersion = 3625368A27249A66007B2F9A /* KnoxCoin.xcdatamodel */;
+			path = KnoxCoin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3625367527249A66007B2F9A /* Project object */;
+}
