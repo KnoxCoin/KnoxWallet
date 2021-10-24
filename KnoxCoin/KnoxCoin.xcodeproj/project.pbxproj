@@ -21,6 +21,7 @@
 		362536B62724F2B7007B2F9A /* CodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362536B52724F2B7007B2F9A /* CodesViewController.swift */; };
 		362536B827253AFD007B2F9A /* RecoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362536B727253AFD007B2F9A /* RecoverViewController.swift */; };
 		362536BA27253F8B007B2F9A /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362536B927253F8B007B2F9A /* MeViewController.swift */; };
+		362536BC2725C4C0007B2F9A /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362536BB2725C4C0007B2F9A /* TransferViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		362536B52724F2B7007B2F9A /* CodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CodesViewController.swift; path = KnoxCoin/CodesViewController.swift; sourceTree = "<group>"; };
 		362536B727253AFD007B2F9A /* RecoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecoverViewController.swift; path = KnoxCoin/RecoverViewController.swift; sourceTree = "<group>"; };
 		362536B927253F8B007B2F9A /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeViewController.swift; path = KnoxCoin/MeViewController.swift; sourceTree = "<group>"; };
+		362536BB2725C4C0007B2F9A /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		3625367427249A66007B2F9A = {
 			isa = PBXGroup;
 			children = (
+				362536BB2725C4C0007B2F9A /* TransferViewController.swift */,
 				362536B927253F8B007B2F9A /* MeViewController.swift */,
 				362536B727253AFD007B2F9A /* RecoverViewController.swift */,
 				362536B32724F17D007B2F9A /* WelcomeViewController.swift */,
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3625368527249A66007B2F9A /* ViewController.swift in Sources */,
+				362536BC2725C4C0007B2F9A /* TransferViewController.swift in Sources */,
 				362536B42724F17D007B2F9A /* WelcomeViewController.swift in Sources */,
 				362536BA27253F8B007B2F9A /* MeViewController.swift in Sources */,
 				3625368127249A66007B2F9A /* AppDelegate.swift in Sources */,

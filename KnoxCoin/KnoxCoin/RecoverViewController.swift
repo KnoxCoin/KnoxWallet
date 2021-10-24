@@ -18,7 +18,10 @@ class RecoverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let publicKey = "0xe33d8B80f4A1CB0c66Fb6E0e30c0da2b0c6489D3"
         
+        let defaults = UserDefaults.standard
+        defaults.set(publicKey, forKey: "publicKey")
 
         // Do any additional setup after loading the view.
     }

@@ -9,17 +9,26 @@ import UIKit
 
 var numCodes = 5
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController,  UITextFieldDelegate {
 
     @IBOutlet weak var NumCodesField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        NumCodesField.delegate = self
+        NumCodesField.returnKeyType = .done
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         numCodes = Int(NumCodesField.text!)!
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
     }
     
 

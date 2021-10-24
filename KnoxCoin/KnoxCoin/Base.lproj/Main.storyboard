@@ -373,10 +373,10 @@
             </objects>
             <point key="canvasLocation" x="-142" y="79"/>
         </scene>
-        <!--View Controller-->
+        <!--Transfer View Controller-->
         <scene sceneID="EgA-Hb-Jwj">
             <objects>
-                <viewController id="dNn-f1-GR1" sceneMemberID="viewController">
+                <viewController id="dNn-f1-GR1" customClass="TransferViewController" customModule="KnoxCoin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rhL-zt-eek">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,6 +412,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemTealColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="OKPressed:" destination="dNn-f1-GR1" eventType="touchUpInside" id="GFI-gx-MHp"/>
                                     <segue destination="vjv-Ff-c9K" kind="presentation" modalPresentationStyle="fullScreen" id="R3b-cu-WJe"/>
                                 </connections>
                             </button>
@@ -441,6 +442,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Gs-kg-9Vg"/>
+                    <connections>
+                        <outlet property="AddressTextField" destination="Zhr-m6-yRI" id="9bq-SI-UIw"/>
+                        <outlet property="AmountTextField" destination="xY3-QX-al5" id="bj2-XU-cJc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8L-HM-pPn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -518,8 +523,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PEV-k2-ooP"/>
-        <segue reference="Xi5-C8-UzC"/>
+        <segue reference="R3b-cu-WJe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
