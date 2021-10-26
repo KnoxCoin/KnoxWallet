@@ -7,6 +7,8 @@
 
 import UIKit
 
+var transferred = false
+
 class TransferViewController: UIViewController,  UITextFieldDelegate {
     @IBOutlet weak var AmountTextField: UITextField!
     @IBOutlet weak var AddressTextField: UITextField!
@@ -16,7 +18,7 @@ class TransferViewController: UIViewController,  UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         
-        AmountTextField.delegate = self
+        AddressTextField.delegate = self
         AddressTextField.delegate = self
         AmountTextField.returnKeyType = .done
         AmountTextField.returnKeyType = .done
@@ -30,18 +32,23 @@ class TransferViewController: UIViewController,  UITextFieldDelegate {
     
     @IBAction func OKPressed(_ sender: Any) {
         
+//        let defaults = UserDefaults.standard
+//        let sender = defaults.string(forKey: "publicKey")!
+        let sender = "0xA2EEB98051Dc677673E21F9fb23F200C78102488"
+        let recipient = "0xCE652fb7aBD86715a870ea3BaaBfEed24d596A8C"
+        let myAmount = AmountTextField.text! 
         
+        let url = URL(string: "https://knoxcoin-duke.ue.r.appspot.com/verify/\(sender)/\(recipient)/\(myAmount)/\(Date().timeIntervalSince1970)")!
         
-        let url = URL(string: "https://knoxcoin-duke.ue.r.appspot.com//verify/\(sender)/\(recipient)/\(myAmount)/\(Date().timeIntervalSince1970)")!
+        print("requesting")
+        print("https://knoxcoin-duke.ue.r.appspot.com/verify/\(sender)/\(recipient)/\(myAmount)/\(Date().timeIntervalSince1970)")
         var request = URLRequest(url: url)
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        let parameters: [String: Any] = [
-            "id": 13,
-            "name": "Jack & Jill"
-        ]
-        request.httpBody = parameters.percentEncoded()
-
+        
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.timeoutIntervalForRequest = 30.0
+        sessionConfig.timeoutIntervalForResource = 60.0
+        let session = URLSession(configuration: sessionConfig)
+        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data,
                 let response = response as? HTTPURLResponse,
@@ -61,6 +68,8 @@ class TransferViewController: UIViewController,  UITextFieldDelegate {
         }
 
         task.resume()
+        
+        transferred = true
     }
     
     /*

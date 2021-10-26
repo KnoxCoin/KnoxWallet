@@ -476,6 +476,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="OKPressed:" destination="dUY-dY-uPD" eventType="touchUpInside" id="Qh1-s5-9Bd"/>
+                                    <segue destination="vjv-Ff-c9K" kind="presentation" modalPresentationStyle="fullScreen" id="sK7-cV-jay"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid private key!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drz-TH-h4E">
@@ -523,7 +524,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R3b-cu-WJe"/>
+        <segue reference="sK7-cV-jay"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>

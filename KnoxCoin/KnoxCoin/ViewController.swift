@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var CompletedLabel: UILabel!
     @IBOutlet weak var PendingLabel: UILabel!
     
+    
+    
     var lastLabel: UILabel? = nil
     var lastFromLabel: UILabel? = nil
     var lastPendingLabel: UILabel? = nil
@@ -20,20 +22,12 @@ class ViewController: UIViewController {
     var balance = 0
     var first = true
     
-    override func viewWillAppear(_ animated: Bool) {
-        if didRecover
-        {
-            print("UPDATING")
-            updateUI()
-        }
-    }
-    
     func updateUI()
     {
         let text = """
-        [{"Transaction": 0, "Sender": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "Recipient": "0xCE652fb7aBD86715a870ea3BaaBfEed24d596A8C", "amount": 5000000000, "timestamp": 1635038346}, {"Transaction": 1, "Sender": "0xe33d8B80f4A1CB0c66Fb6E0e30c0da2b0c6489D3", "Recipient": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "amount": 5000000, "timestamp": 1635043263}, {"Transaction": 2, "Sender": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "Recipient": "0xCE652fb7aBD86715a870ea3BaaBfEed24d596A8C", "amount": 30000, "timestamp": 1635065106}, {"Transaction": 3, "Sender": "0xCE652fb7aBD86715a870ea3BaaBfEed24d596A8C", "Recipient": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "amount": 10000, "timestamp": 1635065306}, {"Transaction": 4, "Sender": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "Recipient": "0xe33d8B80f4A1CB0c66Fb6E0e30c0da2b0c6489D3", "amount": 1000000, "timestamp": 1635065506}]
+        [{"Transaction": 0, "Sender": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "Recipient": "0xCE652fb7aBD86715a870ea3BaaBfEed24d596A8C", "amount": 5000, "timestamp": 1635038346}, {"Transaction": 1, "Sender": "0xe33d8B80f4A1CB0c66Fb6E0e30c0da2b0c6489D3", "Recipient": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "amount": 50000000, "timestamp": 1635043263}, {"Transaction": 2, "Sender": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "Recipient": "0xCE652fb7aBD86715a870ea3BaaBfEed24d596A8C", "amount": 30000, "timestamp": 1635065106}, {"Transaction": 3, "Sender": "0xCE652fb7aBD86715a870ea3BaaBfEed24d596A8C", "Recipient": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "amount": 10000, "timestamp": 1635065306}, {"Transaction": 4, "Sender": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "Recipient": "0xe33d8B80f4A1CB0c66Fb6E0e30c0da2b0c6489D3", "amount": 1000000, "timestamp": 1635065506}]
 """
-        
+
         let data = text.data(using: .utf8)!
         do {
             if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>]
@@ -47,19 +41,22 @@ class ViewController: UIViewController {
                    print("the damn dt \(dt)")
                    if dt > yesterday
                    {
-                       if !didRecover
-                       {
-                           addPendingLabel(transaction: transaction)
-                       }
+                       addPendingLabel(transaction: transaction)
                    }
                    else
                    {
                        others.append(transaction)
                    }
-                   
+
                    i += 1
 
                }
+                
+                if transferred
+                {
+                    let transaction = ["Transaction": 5, "Sender": "0xA2EEB98051Dc677673E21F9fb23F200C78102488", "Recipient": "0xCE652fb7aBD86715a870ea3BaaBfEed24d596A8C560", "amount": 517, "timestamp": 16350685506] as [String : Any]
+                    self.addPendingLabel(transaction: transaction)
+                }
                 if (lastPendingLabel != nil)
                 {
                     CompletedLabel.topAnchor.constraint(equalTo: lastPendingLabel!.bottomAnchor).isActive = true
@@ -68,10 +65,11 @@ class ViewController: UIViewController {
                 {
                     CompletedLabel.topAnchor.constraint(equalTo: PendingLabel!.bottomAnchor, constant: 50.0).isActive = true
                 }
+                
                 i = 1
                 for other in others
                 {
-                    
+
                     addLabel(transaction: other as! [String : Any], i)
                     i += 1
                 }
@@ -98,7 +96,7 @@ class ViewController: UIViewController {
 
         
         
-        //self.getjson(urlPath: "http://10.194.77.247:5000/history/0xA2EEB98051Dc677673E21F9fb23F200C78102488")
+        //self.getjson(urlPath: "https://knoxcoin-duke.ue.r.appspot.com/history/0xA2EEB98051Dc677673E21F9fb23F200C78102488")
         
         
         BalanceLabel.text = "\(balance) KC"
@@ -124,7 +122,13 @@ class ViewController: UIViewController {
     
     func getjson(urlPath: String) {
         let url = URL(string: urlPath)!
-        let session = URLSession.shared
+        //let session = URLSession.shared
+        
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = TimeInterval(15)
+        configuration.timeoutIntervalForResource = TimeInterval(15)
+        let session = URLSession(configuration: configuration)
+        
         let task = session.dataTask(with: url) { data, response, error in
             print("Task completed")
 
@@ -135,14 +139,45 @@ class ViewController: UIViewController {
 
             do {
                 if let jsonResult = try JSONSerialization.jsonObject(with: data) as? [String: Any] {
-                    if let transactions = jsonResult as? [Any] {
+                    if let transactions = jsonResult as? [[String:Any]] {
                         DispatchQueue.main.async {
                             var i = 1
+                             var others: [Any] = []
                             for transaction in transactions
                             {
-                                self.addLabel(transaction: transaction as! [String : Any], i)
+                                let yesterday: Int = 1635051088
+                                let dt = transaction["timestamp"] as! Int
+                                print("the damn dt \(dt)")
+                                if dt > yesterday
+                                {
+//                                    if !didRecover
+//                                    {
+                                        self.addPendingLabel(transaction: transaction as! [String : Any])
+                                    //}
+                                }
+                                else
+                                {
+                                    others.append(transaction)
+                                }
+
                                 i += 1
+
                             }
+                            if (self.lastPendingLabel != nil)
+                             {
+                                self.CompletedLabel.topAnchor.constraint(equalTo: self.lastPendingLabel!.bottomAnchor).isActive = true
+                             }
+                             else
+                             {
+                                 self.CompletedLabel.topAnchor.constraint(equalTo: self.PendingLabel!.bottomAnchor, constant: 50.0).isActive = true
+                             }
+                             i = 1
+                             for other in others
+                             {
+
+                                 self.addLabel(transaction: other as! [String : Any], i)
+                                 i += 1
+                             }
                         }
                     }
                 }
@@ -200,6 +235,10 @@ class ViewController: UIViewController {
         
         let fromLabel = UILabel()
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        tap.numberOfTapsRequired = 2
+        fromLabel.addGestureRecognizer(tap)
+        
         fromLabel.lineBreakMode = .byCharWrapping
         
         fromLabel.numberOfLines = 0
@@ -243,8 +282,21 @@ class ViewController: UIViewController {
         
         fromLabel.textAlignment = .right
         
+        
+        
         lastPendingFromLabel = fromLabel
         first = false
+    }
+    
+    @objc func doubleTapped()
+    {
+        print("double!")
+        let alert = UIAlertController(title: "Cancel?", message: "If you would like to cancel this transaction, select Yes.", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
     }
     
     func addLabel(transaction: [String : Any], _ i: Int)
